@@ -12,8 +12,8 @@ const page = () => {
   };
 
   return (
-    <section className="flex flex-col md:flex-row max-w-5xl mx-auto my-12 items-center space-y-8 md:space-x-8">
-      <div className=" text-white w-4/5 md:w-1/2 hidden md:flex flex-col items-center justify-center space-y-8">
+    <section className="flex flex-col md:flex-row max-w-5xl mx-auto my-12 items-center align-middle md:space-x-8">
+      <div className=" text-white w-4/5 md:w-1/2 hidden md:flex flex-col items-center justify-center space-y-8 align-middle">
         <Image
           src={loginImage}
           alt="Login Image"
