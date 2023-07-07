@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import vercelImage from '../../public/vercel.svg'
+import doclaneImage from '../../public/doclaneImage.png'
 
 const Navbar = () => {
   return (
@@ -8,8 +8,8 @@ const Navbar = () => {
       <div>
         <Image
         alt={"logo"}
-        src={vercelImage}
-        width={80}
+        src={doclaneImage}
+        width={120}
         />
       </div>
       <div className="space-x-8 font-bold">
