@@ -16,7 +16,7 @@ app.use("/api/users", router);
 // app.get("/", (req, res) => res.send("Server is ready"));
 
 mongoose.connect(
-  "mongodb+srv://darnzykay:myiT8U83fT0qqGAf@doclane.s4nfpml.mongodb.net/doclane?retryWrites=true&w=majority"
+  `${process.env.MONGO_DB_URI}`
 )
   ? app.listen(port, () =>
       console.log(`Server started on http://localhost:${port}`)
