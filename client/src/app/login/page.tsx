@@ -21,18 +21,18 @@ const page = () => {
         <input
           type="text"
           placeholder="Username"
-          className="p-4 rounded-md border-[1px] border-gray-200"
+          className="py-2 px-4 rounded-md border-2 border-gray-300"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"
           placeholder="Password"
-          className="p-4 rounded-md border-[1px] border-gray-200"
+          className="py-2 px-4 rounded-md border-2 border-gray-300"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit" className="px-24 py-4 rounded-md w-3/6 bg-purple-700 text-white">
+        <button type="submit" className="px-24 py-4 rounded-md w-3/6 bg-purple-700 text-white font-bold">
           Login
         </button>
       </form>
