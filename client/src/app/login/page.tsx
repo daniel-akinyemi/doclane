@@ -20,7 +20,7 @@ const page = () => {
       <form className="bg-white h-96 border-gray-100 border-[1px] rounded-2xl w-4/5 md:w-1/2 flex flex-col items-center justify-center space-y-8">
         <input
           type="text"
-          placeholder="Email"
+          placeholder="Username"
           className="p-4 rounded-md border-[1px] border-gray-200"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
