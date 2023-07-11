@@ -4,18 +4,20 @@ import doclaneImage from '../../public/doclaneImage.png'
 
 const Navbar = () => {
   return (
-    <div className="flex mx-auto w-4/5 items-cente justify-around my-4">
+    <div className="flex mx-auto items-cente justify-around py-4 bg-gray-100">
       <div>
+        <Link href='/'>
         <Image
         alt={"logo"}
         src={doclaneImage}
         width={120}
         />
+        </Link>
       </div>
-      <div className="space-x-8 font-bold">
+      <div className="space-x-8 font-bold flex items-center">
         
         <Link href="/login">Login</Link>
-        <Link href="/">Sign Up</Link>
+        <Link href="/sign-up">Sign Up</Link>
       </div>
     </div>
   );
