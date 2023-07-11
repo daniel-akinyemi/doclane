@@ -14,10 +14,10 @@ const Navbar = () => {
         />
         </Link>
       </div>
-      <div className="space-x-8 font-bold flex items-center">
+      <div className="space-x-8 flex items-center font-extrabold">
         
         <Link href="/login">Login</Link>
-        <Link href="/sign-up">Sign Up</Link>
+        <Link href="/sign-up">Sign up</Link>
       </div>
     </div>
   );
