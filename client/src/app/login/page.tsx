@@ -2,10 +2,26 @@
 import { useState } from "react";
 import loginImage from "../../../public/loginImage.png";
 import Image from "next/image";
+import axios from "axios";
 
 const page = () => {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const handleSubmit = async(e)=>{
+    e.preventDefault()
+    try{
+      await axios.post('http://localhost:3001/api/users/login',{username,password})
+
+      alert("login successful.")
+
+    }
+    catch(err){
+      console.log(`message: ${err}`)
+      alert(`Error message: ${err}`)
+    }
+
+  }
 
   return (
     <section className="flex flex-col md:flex-row max-w-5xl mx-auto my-12 items-center align-middle md:space-x-8">
@@ -17,13 +33,14 @@ const page = () => {
           className="rounded-lg"
         />
       </div>
-      <form className="bg-white h-96 border-gray-100 border-[1px] rounded-2xl w-4/5 md:w-1/2 flex flex-col items-center justify-center space-y-8">
+      <form onSubmit={handleSubmit}
+      className="bg-white h-96 border-gray-100 border-[1px] rounded-2xl w-4/5 md:w-1/2 flex flex-col items-center justify-center space-y-8">
         <input
           type="text"
           placeholder="Username"
           className="py-2 px-4 rounded-md border-2 border-gray-300"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
         />
         <input
           type="password"
