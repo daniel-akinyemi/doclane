@@ -3,24 +3,31 @@ import { useState } from "react";
 import loginImage from "../../../public/loginImage.png";
 import Image from "next/image";
 import axios from "axios";
+import { useCookies } from "react-cookie";
+import { useRouter } from "next/navigation";
 
 const page = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter()
+
+  const [,setCookies] = useCookies(['access_token'])
 
   const handleSubmit = async(e)=>{
     e.preventDefault()
     try{
-      await axios.post('http://localhost:3001/api/users/login',{username,password})
-
-      alert("login successful.")
+      const response = await axios.post('http://localhost:3001/api/users/login',{username,password})
+      setCookies('access_token', response.data.token)
+      window.localStorage.setItem("userID", response.data.userID)
+      router.push("/")
+      
 
     }
     catch(err){
-      console.log(`message: ${err}`)
+      console.error(`message: ${err}`)
       alert(`Error message: ${err}`)
     }
-
+    
   }
 
   return (
