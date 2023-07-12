@@ -4,6 +4,7 @@ import loginImage from "../../../public/loginImage.png";
 import Image from "next/image";
 import axios from 'axios'
 
+
 const page = () => {
 
   const [username, setUsername] = useState("");
@@ -12,10 +13,10 @@ const page = () => {
   const handleSubmit = async(e)=>{
     e.preventDefault()
     try{
-      axios.post('http://localhost:3002/api/users/register',{username,password})
+      await axios.post('http://localhost:3001/api/users/register',{username,password})
       alert("user created.")
     }catch(err){
-      console.log(`message: ${err}`)
+      console.error(`message: ${err}`)
       alert(err)
     }
   }
