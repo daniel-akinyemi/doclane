@@ -32,7 +32,7 @@ const page = () => {
           className="rounded-lg"
         />
       </div> */}
-      <form className="bg-white py-24 border-gray-100 border-[1px] rounded-2xl w-full md:w-1/2 flex flex-col items-center justify-center space-y-8 mx-auto">
+      <form className="bg-white py-8 border-gray-100 border-[1px] rounded-2xl w-full md:w-1/2 flex flex-col items-center justify-center space-y-8 mx-auto">
         <input
           type="text"
           placeholder="Email"

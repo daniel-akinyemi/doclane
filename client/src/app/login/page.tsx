@@ -56,10 +56,15 @@ const page = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit" className="px-24 py-4 rounded-md w-3/6 bg-purple-700 text-white font-bold">
+        <button type="submit" className="px-24 py-2 rounded-md w-3/6 bg-purple-700 text-white font-bold">
           Login
         </button>
+        <div className="flex flex-col space-y-4 items-center">
+        <button className="bg-gray-200 text-white px-12 py-2 rounded-md">Sign In With Google</button>
+        <button className="bg-gray-200 text-white px-14 py-2 rounded-md">Sign In with Apple</button>
+      </div>
       </form>
+      
     </section>
   );
 };
