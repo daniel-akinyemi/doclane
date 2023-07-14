@@ -13,7 +13,7 @@ const page = () => {
   const handleSubmit = async(e)=>{
     e.preventDefault()
     try{
-      await axios.post('http://localhost:3001/api/users/register',{username,password})
+      await axios.post('http://localhost:3001/api/auth/register',{username,password})
       alert("user created.")
     }catch(err){
       console.error(`message: ${err}`)
