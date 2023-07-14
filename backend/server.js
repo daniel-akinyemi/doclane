@@ -1,7 +1,8 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
-import router from "./routes/userRoutes.js";
+import userRouter from "./routes/userRoutes.js";
+import documentsRouter from "./routes/documentsRoutes.js";
 import dotenv from 'dotenv';
 
 
@@ -11,7 +12,8 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use("/api/users", router);
+app.use("/api/auth", userRouter);
+app.use("/api/documents", documentsRouter,)
 
 // app.get("/", (req, res) => res.send("Server is ready"));
 
