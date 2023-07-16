@@ -5,6 +5,7 @@ const documentsRouter = express.Router()
 
 documentsRouter.get('/',allDocs)
 documentsRouter.post('/',newDoc)
-documentsRouter.post(':id',specDoc)
+documentsRouter.get(':id',specDoc)
+
 
 export default documentsRouter
