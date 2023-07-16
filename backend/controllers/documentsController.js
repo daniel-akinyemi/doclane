@@ -9,7 +9,17 @@ const allDocs = async (req, res) => {
   }
 };
 
-const newDoc = async () => {};
+const newDoc = async (req,res) => {
+  const doc = new documentModel(req.body)
+  try{
+    // const {name,description,imageUrl,content,docOwner} = req.body
+    const response = await doc.save()
+    res.status(200).json(response)
+  }catch(err){
+    console.error(err)
+    res.status(300).json(err)
+  }
+};
 
 const specDoc = async () => {};
 
