@@ -1,7 +1,11 @@
 import axios from 'axios'
-import React from 'react'
+import React, { useState } from 'react'
 
 const page = () => {
+
+  const [document,setDocument] = useState({
+    
+  })
   
   axios.get(`${process.env.URI}/api/documents/`, {})
 
