@@ -1,3 +1,4 @@
+'use client'
 import axios from 'axios'
 import React, { useState } from 'react'
 
@@ -10,8 +11,10 @@ const page = () => {
   axios.get(`${process.env.URI}/api/documents/`, {})
 
   return (
-    <div>
-
+    <div className='w-5/6 mx-auto my-4'>
+      <section className='my-8'>
+        <div className='text-2xl font-semibold'>Saved Documents</div>
+     </section>
     </div>
   )
 }

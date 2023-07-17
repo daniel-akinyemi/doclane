@@ -18,12 +18,9 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="space-x-8 flex items-center font-extrabold">
+        {cookies.access_token && <Link href="/create-document">Create Document</Link>}
         {!cookies.access_token ? <Link href="/login">Login</Link> :<Link href="/collections">Collections</Link>}
         {!cookies.access_token ? <Link href="/sign-up">Sign up</Link> :<Link href="/profile">Profile</Link>}
-        
-        
-        
-        
       </div>
     </div>
   );
