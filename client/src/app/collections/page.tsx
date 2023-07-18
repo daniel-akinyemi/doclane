@@ -13,7 +13,7 @@ const page = () => {
   return (
     <div className='w-5/6 mx-auto my-4'>
       <section className='my-8'>
-        <div className='text-2xl font-semibold'>Saved Documents</div>
+        <div className='text-2xl font-extrabold border-b-4'>Collections</div>
      </section>
     </div>
   )
