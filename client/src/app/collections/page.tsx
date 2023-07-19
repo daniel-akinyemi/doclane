@@ -1,4 +1,5 @@
 'use client'
+import SingleDocuments from '@/components/SingleDocuments'
 import axios from 'axios'
 import React, { useState } from 'react'
 
@@ -14,6 +15,9 @@ const page = () => {
     <div className='w-5/6 mx-auto my-4'>
       <section className='my-8'>
         <div className='text-2xl font-extrabold border-b-4'>Collections</div>
+        <section>
+          <SingleDocuments/>
+        </section>
      </section>
     </div>
   )
