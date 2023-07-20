@@ -9,7 +9,7 @@ const page = () => {
   const [newDoc,setNewDoc] = useState({
     title:"",
     description:"",
-    imageUrl:"",
+    // imageUrl:"",
     content:"",
     docOwner:userID,
   })
@@ -47,7 +47,7 @@ const page = () => {
           <label htmlFor="content"></label>
           <input type="text" id="content" placeholder="Content" name='content' onChange={handleChange} className="px-4 py-2 border-2 border-gray-500"/>
         </div>
-        <button type="submit" className="px-16 py-2 rounded-lg bg-gray-700 text-white h-40">Submit Document</button>
+        <button type="submit" className="px-16 py-4 rounded-lg bg-gray-700 text-white">Submit Document</button>
       </form>
     </div>
   );
