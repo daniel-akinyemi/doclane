@@ -47,7 +47,7 @@ const page = () => {
           <label htmlFor="content"></label>
           <input type="text" id="content" placeholder="Content" name='content' onChange={handleChange} className="px-4 py-2 border-2 border-gray-500"/>
         </div>
-        <button type="submit" className="px-16 py-4 rounded-lg bg-gray-700 text-white">Submit Document</button>
+        <button type="submit" className="py-4 text-center px-14 rounded-lg bg-gray-700 text-white">Submit Document</button>
       </form>
     </div>
   );
