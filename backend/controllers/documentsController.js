@@ -2,7 +2,7 @@ import { documentModel } from "../models/DocumentModels.js";
 
 const allDocs = async (req, res) => {
   try {
-    const response = documentModel.find({});
+    const response = await documentModel.find({});
     res.status(200).json(response);
   } catch (err) {
     res.json(err)
