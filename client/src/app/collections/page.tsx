@@ -37,9 +37,9 @@ const Page = () => {
       <section className='my-8'>
         <div className='text-2xl font-extrabold border-b-4'>Collections</div>
         <section>
-          {documents.map((document) => (
+          {documents.map((document,index) => (
             <div key={document._id}>
-              <SingleDocuments document={document}/>
+              <SingleDocuments document={document} index={index}/>
               {/* Render other properties of your document objects as needed */}
             </div>
           ))}
